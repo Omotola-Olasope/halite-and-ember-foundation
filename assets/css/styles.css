@@ -161,6 +161,7 @@ img {
 .home__button {
   font-family: var(--second-font);
   color: var(--title-color);
+  text-align: center;
 }
 
 .home__subtitle {
@@ -176,6 +177,9 @@ img {
 .home__description {
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
+  text-align: justify;
+  hyphens: auto;
+  /*text-align-last: left;*/
 }
 
 .home__button {
