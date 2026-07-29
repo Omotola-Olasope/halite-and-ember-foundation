@@ -53,11 +53,14 @@
   --space-2: 0.5rem;
   --space-5: 2rem;
   --space-6: 3rem;
+
+  /* Matches the home page column so the two pages share one composition. */
+  --column: 40rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ground: #17140f;
+    --ground: #1e1a14;
     --ink: #f4efe5;
     --muted: #a69c8d;
     --accent: #e39068;
@@ -82,11 +85,20 @@ body {
 .page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   padding: var(--space-6) clamp(1.5rem, 6vw, 6rem);
 }
 @supports (min-height: 100svh) {
   .page { min-height: 100svh; }
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--column);
 }
 
 main {
@@ -104,7 +116,6 @@ main {
 }
 
 .message {
-  max-width: 30ch;
   margin: var(--space-6) 0 0;
   font-size: var(--step-message);
   font-weight: 350;
@@ -135,7 +146,6 @@ footer {
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-5);
   justify-content: space-between;
-  max-width: 36rem;
   font-size: 0.9375rem;
   color: var(--muted);
 }
@@ -152,6 +162,7 @@ footer p { margin: 0; }
 
 <body>
 <div class="page">
+ <div class="column">
   <main>
     <p class="nameplate">The Halite&nbsp;&amp;&nbsp;Ember Foundation</p>
 
@@ -164,6 +175,7 @@ footer p { margin: 0; }
     <p>The Halite &amp; Ember Foundation</p>
     <p class="year">2026</p>
   </footer>
+ </div>
 </div>
 </body>
 </html>

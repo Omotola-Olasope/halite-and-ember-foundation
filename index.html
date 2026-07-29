@@ -57,7 +57,7 @@
 
   --step-nameplate: 0.8125rem;
   --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
-  --step-mission: clamp(1.75rem, 1.35rem + 1.9vw, 3rem);
+  --step-mission: clamp(1.75rem, 1.25rem + 1.9vw, 2.25rem);
 
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -65,19 +65,20 @@
   --space-6: 3rem;
   --space-7: 4.5rem;
 
-  /* Shared measure in rem so prose, rule and footer align regardless of their
-     own font size. The mission stays in ch so it tracks its fluid size. */
-  --measure: 36rem;
-  --measure-mission: 34ch;
+  /* One column for the whole composition, centred on the page. Its width is set
+     by the body measure, roughly 70 characters a line, and the statement is
+     sized to sit inside it. Two different widths pull the visual mass off
+     centre, so everything shares this one. */
+  --column: 40rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ground: #17140f;
+    --ground: #1e1a14;
     --ink: #f4efe5;
     --muted: #a69c8d;
     --accent: #e39068;
-    --rule: #322c23;
+    --rule: #383127;
     --selection: #3a2f24;
   }
 }
@@ -101,11 +102,20 @@ body {
 .page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   padding: var(--space-6) clamp(1.5rem, 6vw, 6rem);
 }
 @supports (min-height: 100svh) {
   .page { min-height: 100svh; }
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--column);
 }
 
 main {
@@ -123,24 +133,37 @@ main {
 }
 
 .mission {
-  max-width: var(--measure-mission);
-  margin: var(--space-6) 0 0;
+  margin: var(--space-7) 0 0;
   font-size: var(--step-mission);
   font-weight: 350;
   line-height: 1.18;
   letter-spacing: -0.011em;
   text-indent: -0.03em; /* optical alignment of the initial T */
-  text-wrap: balance;
+  text-wrap: pretty;
+}
+
+/* From 512px up, each unit of the statement takes its own line: name, then
+   predicate, then object. Automatic wrapping cannot produce that pattern, and
+   greedy wrapping strands "exists" on the first line anywhere above about 560px.
+
+   Below 512px the units run inline and wrap naturally, because there the column
+   is too narrow to hold the name on one line and forcing the units would leave
+   "Foundation" stranded on a line of its own. */
+@media (min-width: 32rem) {
+  .mission span {
+    display: block;
+    text-indent: 0;
+  }
+
+  .mission span:first-child { text-indent: -0.03em; }
 }
 
 .prose {
-  max-width: var(--measure);
   margin: var(--space-6) 0 0;
   text-wrap: pretty;
 }
 
 .colophon {
-  max-width: var(--measure);
   margin: var(--space-7) 0 0;
   padding-top: var(--space-5);
   border-top: 1px solid var(--rule);
@@ -175,7 +198,6 @@ footer {
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-5);
   justify-content: space-between;
-  max-width: var(--measure);
   font-size: 0.9375rem;
   color: var(--muted);
 }
@@ -192,10 +214,11 @@ footer p { margin: 0; }
 
 <body>
 <div class="page">
+ <div class="column">
   <main>
     <h1 class="nameplate">The Halite&nbsp;&amp;&nbsp;Ember Foundation</h1>
 
-    <p class="mission">The Halite&nbsp;&amp;&nbsp;Ember Foundation exists to invest in people whose potential exceeds their opportunity.</p>
+    <p class="mission"><span>The Halite&nbsp;&amp;&nbsp;Ember Foundation</span> <span>exists to invest in people whose</span> <span>potential exceeds their&nbsp;opportunity.</span></p>
 
     <div class="prose">
       <p>We work across education, enterprise, the arts and youth development, supporting people whose gifts have outrun the opportunities available to them. Every commitment we make carries relationship and duration as well as money, because we invest in people rather than projects. The Foundation is Christian in its governance and universal in its service: it serves people of all faiths, and asks those it serves to subscribe to nothing.</p>
@@ -211,6 +234,7 @@ footer p { margin: 0; }
     <p>The Halite &amp; Ember Foundation</p>
     <p class="year">2026</p>
   </footer>
+ </div>
 </div>
 </body>
 </html>
