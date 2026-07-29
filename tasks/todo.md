@@ -39,8 +39,19 @@ Two Performance diagnostics flag missing text compression and short cache lifeti
 
 Verified by hand as well: the webfont loads and the variable weight axis applies, prose sits at 62 characters per line, prose and footer and colophon rule all align to a single 576px measure, keyboard focus shows a 2px accent ring at 4px offset, and there is no horizontal overflow at 375px or 1280px. Light and dark both render.
 
+### Revision, 29 July 2026: centred composition
+
+The founder found the first version left aligned and short of world class. The composition is now a single 40rem column centred on the page, with every element sharing one width so the visual mass sits on the centre line. Two widths were tried first, a wide statement over a narrower body, and rejected: it pulled the mass back off centre and reopened the void on the right.
+
+The statement's line breaks are now set by hand from 512px up, one line each for the name, the predicate and the object. Nothing automatic produces that pattern. `text-wrap: balance` split the Foundation's own name across two lines, and greedy wrapping strands "exists" on the first line at every width above roughly 560px. Below 512px the units run inline and wrap naturally, because forcing them there strands "Foundation" alone.
+
+Verified across eighteen viewport widths from 320px to 2560px: the name holds line one from 480px up, the statement settles into three lines from 560px up, and nothing overflows anywhere. The dark ground was lifted off flat black to a warm near black, which reads as considered rather than cheap and sits further from the company's identity.
+
+Re-measured on the rendered page after the change: cumulative layout shift 0, every colour pairing at AA or better with the lowest at 6.4 to 1, zero external requests, one 34KB font. The full Lighthouse audit was not repeated, because that command was declined; the 100/100/96/100 figures above describe the version before this revision. Nothing affecting asset loading changed, but the audit is worth re-running before the next deploy.
+
 Known follow ups, deliberately left:
 
 * The footer year is hardcoded to 2026 because the page ships zero JavaScript. Workstream 3 generates it at build time. It needs a manual edit before 1 January 2027 if the Astro migration has not landed by then.
 * No favicon, pending a mark from the design system.
 * `404.html` duplicates the shared CSS foundation because there is no build step to share it yet. Workstream 3 removes the duplication via templates.
+* At 320px, the narrowest viewport still in use, one word of the statement sits alone on a line. It is caused by binding "their opportunity" so it cannot split, which is what keeps the last line from stranding between 512px and 639px. The wider band matters more than a 320px screen, so the binding stays.
