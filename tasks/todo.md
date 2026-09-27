@@ -1,5 +1,42 @@
 # Halite & Ember Foundation website: plan
 
+## Workstream 4: full multi page site, Ink & Mineral (27 September 2026)
+
+Approved and built on `staging` (27 September 2026); founder review in progress on the pull request. This replaces workstream 2 (design system) in practice; workstream 3 (Astro) stays deferred.
+
+Decisions taken with the founder: one typeface, Kulim Park, self hosted from the Google Fonts files. Plain static HTML, no build step. Curated Unsplash photography, downloaded and served as optimised WebP from the repo. The ALX Africa logo is used now, sourced from ALX's public site, and is replaceable if consent is not given. Pico CSS from the brief is dropped: it would fight the bespoke design and add weight for nothing. Responsiveness should equal or beat omotola-olasope.github.io.
+
+Built on `staging`, previewed locally, pull request to `main`. Nothing reaches production without explicit approval.
+
+### Structure
+* [ ] `/` Home: hero "Potential should not be limited by opportunity.", exact mission, "Investing in people. Building for the long term.", four principles, two current programmes, closing band
+* [ ] `/about/`: mission, the two objects only, principles, "Christian in origin. Universal in service.", our standard
+* [ ] `/programmes/`: approach, HEF-2026-001 Data Analytics Scholarship, HEF-2026-002 HEF Bursary, clearly separated Future programmes
+* [ ] `/partners/`: ALX Africa with logo, factual description, no trustee interest
+* [ ] `/governance/`: three trustees (equal, no hierarchy), independent Selection Lead, Selection Panel wording, written decision files, stewardship and accounts, Legal status (pending, no number)
+* [ ] `/contact/`: hello@haliteandemberfoundation.org only
+* [ ] Reskin `privacy.html` and `404.html` into the new system without changing the privacy notice wording
+
+### Shared system
+* [ ] `assets/css/site.css`: tokens (Ink #111315, Mineral #526B78, Cloud #F3F5F4, Moss #687461, Copper #A66A45), fluid type and spacing via clamp, grid, light and dark themes, AA contrast in both
+* [ ] `assets/js/site.js`: theme toggle (respects system, remembers choice), accessible mobile menu (focus trap, Escape, scroll lock), reveal on scroll with reduced motion respected. Site works fully without JS
+* [ ] Sticky header with active page marker; footer on every page with the legal status line ready for the charity number
+* [ ] Kulim Park woff2 (Latin subset) with metric matched fallback, no layout shift
+* [ ] Images: responsive `srcset` WebP, explicit dimensions, lazy loading below the fold, meaningful alt text, no people in distress
+* [ ] Per page title, description, canonical, Open Graph; sitemap.xml and robots.txt
+* [ ] Remove `fonts/source-serif-4-subset.woff2` once nothing references it
+
+### Verification
+* [ ] Every page at 320, 375, 768, 1024, 1440 and 2560px: no horizontal overflow, 44px touch targets, readable measure
+* [ ] Keyboard only pass, visible focus, skip link, landmarks
+* [ ] Light and dark screenshots of each page
+* [ ] Lighthouse on Home and Programmes: 95+ in all four categories
+* [ ] Content audit (brief section 16): grep for prohibited terms (Ltd, PorchTalk, Scholars Space, stipend, data top up, device fund, donate, registered charity, charity number), exact mission present on Home and About
+
+### Flagged for the founder (not changed without a decision)
+* `privacy.html` currently live says "IF INCLUDED, we buy your data allowance directly" in capitals, and mentions data allowances in two further places. The brief says not to mention data support anywhere. The notice is a legal document, so its wording needs your decision.
+* `CLAUDE.md` still says no named programmes may be published. It will be updated to reflect HEF-2026-001 and HEF-2026-002 as live.
+
 Status: confirmed by the founder on 28 July 2026. Workstream 1 is built and awaiting review on a pull request. Workstreams 2 and 3 are not started.
 
 ## Workstream 1: holding page (ships independently, first)
