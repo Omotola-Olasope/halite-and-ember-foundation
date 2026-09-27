@@ -3,241 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>How we handle your information &bull; The Halite &amp; Ember Foundation</title>
-<meta name="description" content="How the Halite &amp; Ember Foundation collects, uses and protects the information you give us when you apply to the Opportunity Bursary.">
-<link rel="canonical" href="https://haliteandemberfoundation.org/privacy">
-
-<link rel="preload" href="/fonts/source-serif-4-subset.woff2" as="font" type="font/woff2" crossorigin>
-
-<style>
-@font-face {
-  font-family: "Source Serif 4";
-  src: url("/fonts/source-serif-4-subset.woff2") format("woff2-variations");
-  font-weight: 300 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Metrics matched to Source Serif 4 so the swap costs no reflow. */
-@font-face {
-  font-family: "Serif Fallback Georgia";
-  src: local("Georgia");
-  size-adjust: 98.66%;
-  ascent-override: 105.01%;
-  descent-override: 33.95%;
-  line-gap-override: 0%;
-}
-@font-face {
-  font-family: "Serif Fallback Times";
-  src: local("Times New Roman");
-  size-adjust: 106.2%;
-  ascent-override: 97.55%;
-  descent-override: 31.54%;
-  line-gap-override: 0%;
-}
-
-:root {
-  color-scheme: light dark;
-
-  --serif: "Source Serif 4", "Serif Fallback Georgia", "Serif Fallback Times", Georgia, serif;
-
-  --ground: #faf7f1;
-  --ink: #221e19;
-  --muted: #5c544a;
-  --accent: #9c3d1f;
-  --rule: #e3dccf;
-  --selection: #f0e2d3;
-  --notice: #f3ece0;
-
-  --step-body: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
-  --step-title: clamp(1.625rem, 1.25rem + 1.4vw, 2.25rem);
-  --step-heading: clamp(1.1875rem, 1.1rem + 0.4vw, 1.375rem);
-
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1.25rem;
-  --space-5: 2rem;
-  --space-6: 3rem;
-  --space-7: 4.5rem;
-
-  --column: 40rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #1e1a14;
-    --ink: #f4efe5;
-    --muted: #a69c8d;
-    --accent: #e39068;
-    --rule: #383127;
-    --selection: #3a2f24;
-    --notice: #292319;
-  }
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background: var(--ground);
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: var(--step-body);
-  font-weight: 400;
-  line-height: 1.62;
-  font-kerning: normal;
-  hanging-punctuation: first last;
-}
-
-::selection { background: var(--selection); }
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: var(--space-6) clamp(1.5rem, 6vw, 6rem);
-}
-@supports (min-height: 100svh) {
-  .page { min-height: 100svh; }
-}
-
-.column {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  width: 100%;
-  max-width: var(--column);
-}
-
-main { padding-block: var(--space-6) var(--space-7); }
-
-.nameplate {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-h1 {
-  margin: var(--space-6) 0 0;
-  font-size: var(--step-title);
-  font-weight: 350;
-  line-height: 1.18;
-  letter-spacing: -0.011em;
-  text-wrap: balance;
-}
-
-.standfirst {
-  margin: var(--space-4) 0 0;
-  color: var(--muted);
-  text-wrap: pretty;
-}
-
-.updated {
-  margin: var(--space-3) 0 0;
-  font-size: 0.9375rem;
-  color: var(--muted);
-  font-variant-numeric: oldstyle-nums;
-}
-
-h2 {
-  margin: var(--space-7) 0 0;
-  font-size: var(--step-heading);
-  font-weight: 600;
-  line-height: 1.3;
-  text-wrap: balance;
-}
-
-h3 {
-  margin: var(--space-5) 0 0;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-p { margin: var(--space-4) 0 0; text-wrap: pretty; }
-
-ul {
-  margin: var(--space-4) 0 0;
-  padding-left: 1.25em;
-}
-
-li { margin-top: var(--space-2); text-wrap: pretty; }
-
-li::marker { color: var(--muted); }
-
-strong { font-weight: 600; }
-
-.callout {
-  margin: var(--space-5) 0 0;
-  padding: var(--space-4) var(--space-5);
-  background: var(--notice);
-  border-left: 2px solid var(--accent);
-}
-
-.callout p:first-child { margin-top: 0; }
-
-a {
-  color: var(--accent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
-  transition: color 160ms ease;
-}
-
-a:hover { color: var(--ink); }
-
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
-  border-radius: 1px;
-}
-
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-5);
-  justify-content: space-between;
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--rule);
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
-
-footer p { margin: 0; }
-
-.year { font-variant-numeric: oldstyle-nums; }
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition-duration: 0.01ms !important; }
-}
-</style>
+<meta name="description" content="How the Halite &amp; Ember Foundation collects, uses and protects the information you give us when you apply to the Halite &amp; Ember Foundation Bursary.">
+<link rel="canonical" href="https://haliteandemberfoundation.org/privacy/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Halite &amp; Ember Foundation">
+<meta property="og:title" content="How we handle your information">
+<meta property="og:description" content="The privacy notice of the Halite &amp; Ember Foundation.">
+<meta property="og:url" content="https://haliteandemberfoundation.org/privacy/">
+<meta property="og:image" content="https://haliteandemberfoundation.org/assets/img/bridge-night-1600.webp">
+<meta name="theme-color" content="#111315">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/dm-serif-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/kulim-park-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>try{var t=localStorage.getItem("hef-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="/assets/js/site.js" defer></script>
 </head>
-
 <body>
-<div class="page">
- <div class="column">
-  <main>
-    <p class="nameplate">The Halite&nbsp;&amp;&nbsp;Ember Foundation</p>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <h1>How we handle your information</h1>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/" aria-label="The Halite &amp; Ember Foundation, home">
+      <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="7" y="7" width="14" height="14" transform="rotate(45 14 14)" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="14" r="2.75" fill="currentColor"/></svg>
+      <span>The Halite &amp; Ember <span class="brand-name-long">Foundation</span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/about/">About</a></li>
+        <li><a class="nav-link" href="/programmes/">Programmes</a></li>
+        <li><a class="nav-link" href="/partners/">Partners</a></li>
+        <li><a class="nav-link" href="/governance/">Governance</a></li>
+        <li><a class="nav-link" href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="icon-button theme-toggle" type="button" aria-label="Switch theme">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span class="bars" aria-hidden="true"><span class="bar"></span><span class="bar"></span></span>
+    </button>
+  </div>
+</header>
 
-    <p class="standfirst">This notice explains what we collect when you apply to the Halite & Ember Foundation Bursary, what we do with it, who sees it, and how to get it removed. It is written to be read, not to protect us.</p>
+<div class="menu" id="menu">
+  <nav aria-label="Main, small screens">
+    <ol class="menu-list">
+      <li><a href="/"><span>01</span>Home</a></li>
+      <li><a href="/about/"><span>02</span>About</a></li>
+      <li><a href="/programmes/"><span>03</span>Programmes</a></li>
+      <li><a href="/partners/"><span>04</span>Partners</a></li>
+      <li><a href="/governance/"><span>05</span>Governance</a></li>
+      <li><a href="/contact/"><span>06</span>Contact</a></li>
+    </ol>
+  </nav>
+  <div class="menu-foot">
+    <p>Write to us</p>
+    <a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a>
+  </div>
+</div>
 
-    <p class="updated">Last updated 29 July 2026</p>
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="wrap">
+      <p class="eyebrow">Privacy notice</p>
+      <h1 id="page-title">How we handle your information</h1>
+      <p class="lede">This notice explains what we collect when you apply to the Halite & Ember Foundation Bursary, what we do with it, who sees it, and how to get it removed. It is written to be read, not to protect us.</p>
+      <p class="prose" style="margin-top: var(--space-m)">Last updated 27 September 2026</p>
+    </div>
+  </section>
 
-    <div class="callout">
-      <p><strong>We will never ask you for money or for your bank details.</strong> We do not pay money to applicants. If you are selected, we pay ALX directly, and IF INCLUDED, we buy your data allowance directly. If anyone contacts you claiming to represent this Foundation and asks you for a payment, a fee, or your bank or card details, it is not us. Please tell us at <a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a>.</p>
+  <section class="section section--flush-top">
+    <div class="wrap longform">
+<div class="callout">
+      <p><strong>We will never ask you for money or for your bank details.</strong> We do not pay money to applicants. If you are selected, we pay ALX directly. If anyone contacts you claiming to represent this Foundation and asks you for a payment, a fee, or your bank or card details, it is not us. Please tell us at <a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a>.</p>
     </div>
 
     <h2>Who is responsible for your information</h2>
 
     <p>The Halite &amp; Ember Foundation is being established as a charitable incorporated organisation in England and Wales. That registration is not yet complete, so the Foundation is not yet a separate legal body, and this round is funded personally by its founder, who is the person responsible in law for the information you give us.</p>
 
-    <p>The Foundation is legally independent of Halite &amp; Ember Ltd, a separate commercial company that shares its name. Your application is never shared with that company.</p>
+    <p>Your application is never shared with any organisation other than those listed under &ldquo;Who sees it&rdquo; below.</p>
 
     <p>You can reach us about anything in this notice at <a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a>. It is the only address we use. We will reply within thirty days.</p>
 
@@ -274,7 +123,7 @@ footer p { margin: 0; }
     <ul>
       <li><strong>To decide who receives a bursary.</strong> We rely on your consent, which you give with the confirmation box at the end of the form. You can withdraw it at any time, though if you withdraw it before we decide, we cannot consider your application.</li>
       <li><strong>To contact you about your application.</strong> Every applicant gets a reply, successful or not. We use your phone number, or your email address if you gave one.</li>
-      <li><strong>To arrange the programme for people we select.</strong> We use your name, contact details and pathway choice to enrol you with ALX and to buy your monthly data allowance.</li>
+      <li><strong>To arrange the programme for people we select.</strong> We use your name, contact details and pathway choice to enrol you with ALX.</li>
       <li><strong>To keep an honest record of how we decided.</strong> The Founding Charter binds the Foundation to record the reasoning and outcome of every funding decision it makes. We rely on our legitimate interest in being accountable for money we have given away.</li>
       <li><strong>To prevent fraud and impersonation.</strong> People pretending to represent funders is a real problem, and we rely on our legitimate interest in protecting applicants from it.</li>
     </ul>
@@ -284,7 +133,6 @@ footer p { margin: 0; }
     <ul>
       <li><strong>The founder and the Selection Lead.</strong> Nobody else at the Foundation sees applications.</li>
       <li><strong>ALX</strong>, but only if you are selected, and only the details needed to enrol you. Applications that are not selected are never sent to ALX.</li>
-      <li><strong>A mobile network or airtime provider</strong>, if you are selected, so that we can buy your data allowance. They receive your phone number and nothing else.</li>
       <li><strong>Google</strong>, which provides the form, the spreadsheet your answers are stored in, and our email. Google processes the information on our instructions and not for its own purposes.</li>
       <li><strong>WhatsApp</strong>, if you choose to send a voice note.</li>
     </ul>
@@ -335,15 +183,44 @@ footer p { margin: 0; }
     <p>If we change how we handle your information, we will update this page and change the date at the top. If the change is significant and affects an application we already hold, we will contact you about it.</p>
 
     <p>When the Foundation completes its charity registration, legal responsibility for your information passes from the founder to the registered organisation. We will update this page and say so plainly when that happens.</p>
+    </div>
+  </section>
+</main>
 
-    <p><a href="/">Return to the home page</a></p>
-  </main>
-
-  <footer>
-    <p>The Halite &amp; Ember Foundation</p>
-    <p class="year">2026</p>
-  </footer>
- </div>
-</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="brand" href="/">
+          <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="7" y="7" width="14" height="14" transform="rotate(45 14 14)" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="14" r="2.75" fill="currentColor"/></svg>
+          <span>The Halite &amp; Ember Foundation</span>
+        </a>
+        <p class="footer-mission">The Halite &amp; Ember Foundation exists to invest in people whose potential exceeds their opportunity.</p>
+      </div>
+      <nav aria-label="Footer">
+        <p class="footer-heading">The Foundation</p>
+        <ul class="footer-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/programmes/">Programmes</a></li>
+          <li><a href="/partners/">Partners</a></li>
+          <li><a href="/governance/">Governance</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <ul class="footer-links">
+          <li><a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/privacy/">Privacy notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <!-- Charity number: when registration is complete, replace the line below with the registered status line and number. -->
+      <p>The Halite &amp; Ember Foundation. Governed from England and Wales. Registration with the Charity Commission is pending.</p>
+      <p>&copy; 2026</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
