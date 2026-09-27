@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found &bull; The Halite &amp; Ember Foundation</title>
-<meta name="description" content="This page could not be found.">
-<link rel="canonical" href="https://haliteandemberfoundation.org/404.html">
+<title>About &bull; The Halite &amp; Ember Foundation</title>
+<meta name="description" content="The About page of the Halite &amp; Ember Foundation opens once its charity registration is complete.">
+<link rel="canonical" href="https://haliteandemberfoundation.org/about/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Halite &amp; Ember Foundation">
-<meta property="og:title" content="Page not found">
-<meta property="og:description" content="This page could not be found.">
-<meta property="og:url" content="https://haliteandemberfoundation.org/404.html">
-<meta property="og:image" content="https://haliteandemberfoundation.org/assets/img/bridge-night-1600.webp">
+<meta property="og:title" content="About &bull; The Halite &amp; Ember Foundation">
+<meta property="og:description" content="Still laying the foundations.">
+<meta property="og:url" content="https://haliteandemberfoundation.org/about/">
+<meta property="og:image" content="https://haliteandemberfoundation.org/assets/img/colonnade-1600.webp">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#111315">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -24,7 +24,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header">
+<header class="site-header site-header--overlay">
   <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="The Halite &amp; Ember Foundation, home">
       <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true"><rect x="7" y="7" width="14" height="14" transform="rotate(45 14 14)" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="14" cy="14" r="2.75" fill="currentColor"/></svg>
@@ -33,7 +33,7 @@
     <nav aria-label="Main">
       <ul class="nav-list">
         <li><a class="nav-link" href="/">Home</a></li>
-        <li><a class="nav-link" href="/about/">About</a></li>
+        <li><a class="nav-link" href="/about/" aria-current="page">About</a></li>
         <li><a class="nav-link" href="/programmes/">Programmes</a></li>
         <li><a class="nav-link" href="/partners/">Partners</a></li>
         <li><a class="nav-link" href="/governance/">Governance</a></li>
@@ -54,7 +54,7 @@
   <nav aria-label="Main, small screens">
     <ol class="menu-list">
       <li><a href="/"><span>01</span>Home</a></li>
-      <li><a href="/about/"><span>02</span>About</a></li>
+      <li><a href="/about/" aria-current="page"><span>02</span>About</a></li>
       <li><a href="/programmes/"><span>03</span>Programmes</a></li>
       <li><a href="/partners/"><span>04</span>Partners</a></li>
       <li><a href="/governance/"><span>05</span>Governance</a></li>
@@ -68,14 +68,22 @@
 </div>
 
 <main id="main">
-  <section class="page-hero" aria-labelledby="page-title">
+  <section class="hero hero--page" aria-labelledby="page-title">
+    <div class="hero-media">
+      <img src="/assets/img/colonnade-1600.webp"
+           srcset="/assets/img/colonnade-800.webp 800w, /assets/img/colonnade-1600.webp 1600w, /assets/img/colonnade-2400.webp 2400w"
+           sizes="100vw" width="2400" height="1600" fetchpriority="high"
+           alt="A row of stone columns casting long shadows in the sun">
+    </div>
     <div class="wrap">
-      <p class="eyebrow">Page not found</p>
-      <h1 id="page-title">That page cannot be found.</h1>
-      <p class="lede">It may have moved, or the address may be mistyped.</p>
-      <div class="actions">
-        <a class="button" href="/">Return to the home page</a>
-        <a class="button button--ghost" href="/contact/">Contact us</a>
+      <div class="hero-content">
+        <p class="eyebrow">About</p>
+        <h1 id="page-title">Still laying the foundations.</h1>
+        <p class="hero-mission">This page opens once the Foundation&rsquo;s charity registration is complete. Good foundations take a little time, and we would rather build this one properly.</p>
+        <div class="actions">
+          <a class="button button--copper" href="/contact/">Contact us <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
+          <a class="button button--ghost" href="/">Return home</a>
+        </div>
       </div>
     </div>
   </section>
