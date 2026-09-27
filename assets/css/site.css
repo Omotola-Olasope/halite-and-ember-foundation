@@ -731,6 +731,7 @@ html:not(.enhanced) .header-inner { flex-wrap: wrap; height: auto; padding-block
 
 .cards { display: grid; gap: var(--space-m); list-style: none; }
 @media (min-width: 48rem) { .cards { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 64rem) { .cards--three { grid-template-columns: repeat(3, 1fr); } }
 
 .card {
   position: relative;
@@ -743,6 +744,8 @@ html:not(.enhanced) .header-inner { flex-wrap: wrap; height: auto; padding-block
   transition: transform 400ms var(--ease), box-shadow 400ms var(--ease);
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -28px rgb(17 19 21 / 0.4); }
+/* Cards that are not links do not lift on hover. */
+.card--static:hover { transform: none; box-shadow: none; }
 .card .media { border-radius: 0; aspect-ratio: 3 / 2; }
 .card .media img { transition: transform 900ms var(--ease); }
 .card:hover .media img { transform: scale(1.04); }
@@ -1063,6 +1066,30 @@ html:not(.enhanced) .copy-button { display: none; }
     scroll-behavior: auto !important;
   }
 }
+
+/* Image credits ------------------------------------------------------------ */
+
+.credits { list-style: none; border-top: 1px solid var(--line); }
+.credits li {
+  display: grid;
+  gap: 0.125rem 1.5rem;
+  padding-block: var(--space-s);
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 48rem) {
+  .credits li { grid-template-columns: 11rem 1fr auto; align-items: baseline; }
+}
+.credit-page {
+  color: var(--copper-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.credit-subject { color: var(--muted); }
+.credit-link { color: var(--text); font-weight: 600; text-decoration-color: var(--line); }
+.credit-link:hover { color: var(--copper-text); text-decoration-color: currentColor; }
+.lede a { color: var(--accent); }
 
 /* Long form (privacy notice) ------------------------------------------------ */
 
