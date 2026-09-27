@@ -11,9 +11,14 @@
 * Avoid stock phrases ("Building for the long term", "Staying the course", "A longer horizon"). When a line is weak, offer options rather than guessing twice.
 * List trustees exactly in the order the founder gives (Omotola Olasope, Oluwatoyosi Oluwakemi Fatogun, Adesegun Sunmola). Never reorder them, alphabetically or otherwise, and never explain the order on the page.
 * Do not publish selection mechanics (Selection Lead, Selection Panel, written decision files) or partner relationship details (role, interests) unless asked.
+* Never write copy that assumes one programme or one partner ("Two programmes, one partner", naming ALX where "our delivery partners" is meant). The privacy notice in particular must apply to every programme automatically.
+* No asides about the writing itself ("It is written to be read, not to protect us"), and no personal funding arrangements of the founder.
 * Do not add navigation devices the founder did not ask for, such as a "Next page" link at the foot of each page.
 
 ## Design
+
+* Judge every photograph at full size before using it, never from a contact sheet thumbnail. A thumbnail hid that the first Contact image showed a derelict building.
+* No decorative coloured left borders on cards or callouts; they read as generic and AI made.
 
 * Headlines use DM Serif Display; Kulim Park Light read as too thin at display sizes.
 * Page heroes are full bleed: the photograph sits behind the headline on every main page, as on Home.

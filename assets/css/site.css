@@ -168,7 +168,7 @@ h3 { font-weight: 600; letter-spacing: -0.005em; line-height: 1.25; }
    every label stay in Kulim Park. */
 h1, h2,
 .principle h3, .card h3, .mission-quote p, .statement, .object::before,
-.object h3, .issuer, .email-display, .menu-list a {
+.object h3, .email-display, .menu-list a {
   font-family: var(--display);
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -928,28 +928,6 @@ html:not(.enhanced) .header-inner { flex-wrap: wrap; height: auto; padding-block
 .trustee h3 { font-size: var(--step-1); }
 .trustee p { margin-top: 0.25rem; color: var(--muted); font-size: var(--step--1); }
 
-/* Issuer line --------------------------------------------------------------- */
-
-.issuer {
-  display: inline-block;
-  margin-top: var(--space-l);
-  padding: var(--space-m) clamp(1.25rem, 3vw, 2rem);
-  border: 1px solid var(--line);
-  border-left: 2px solid var(--copper);
-  font-size: var(--step-1);
-  font-weight: 400;
-  line-height: 1.35;
-}
-.issuer small {
-  font-family: var(--font);
-  display: block;
-  margin-bottom: 0.375rem;
-  color: var(--muted);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
 
 /* Status panel (legal status) ---------------------------------------------- */
 
@@ -1006,9 +984,9 @@ html:not(.enhanced) .copy-button { display: none; }
 
 .callout {
   padding: var(--space-m) clamp(1.25rem, 3vw, 2rem);
-  border-left: 2px solid var(--copper);
+  border: 1px solid var(--line);
   background: var(--surface);
-  border-radius: 0 var(--radius) var(--radius) 0;
+  border-radius: var(--radius);
   color: var(--muted);
 }
 .callout strong { color: var(--text); }

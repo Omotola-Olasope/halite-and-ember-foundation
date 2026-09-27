@@ -16,7 +16,7 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | road-valley | Programmes, future programmes | Ryan Searle | https://unsplash.com/photos/uOz71GyDVpo |
 | lagos-aerial | Partners hero | Malik Buraimoh | https://unsplash.com/photos/EMjpo0YjHPw |
 | colonnade | Governance hero | Pix Tresa | https://unsplash.com/photos/LvvIma6We8U |
-| open-doorway | Contact hero | Strange Happenings | https://unsplash.com/photos/rh0FMPT539c |
+| morning-lake | Contact hero | Nguyễn Đức | https://unsplash.com/photos/KdNHbryN5kM |
 
 Trustee portraits in `trustees/` were supplied by the trustees.
 
