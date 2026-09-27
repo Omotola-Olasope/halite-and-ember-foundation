@@ -9,7 +9,7 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | desk-light | Programmes, 2027 editions | ReyLabs Studio | https://unsplash.com/photos/ohxs8oPgQ9k |
 | analytics-screen | Data Analytics Scholarship | Luke Chesser | https://unsplash.com/photos/JKUTrJ4vK00 |
 | music-drum | Programmes, music tuition | Paul Zoetemeijer | https://unsplash.com/photos/ekBOf6sJYYo |
-| seedlings | Programmes, displaced people and widows | Rynco Maekawa | https://unsplash.com/photos/FjNrw31KIrA |
+| village-aerial | Programmes, displaced people and widows | Paul Edesemi | https://unsplash.com/photos/niElH29LKjw |
 | library-windows | Foundation Bursary | Drahomír Hugo Posteby-Mach | https://unsplash.com/photos/n4y3eiQSIoc |
 | lagoon-sunset | Home, closing band | Solomon Wada | https://unsplash.com/photos/IW_edtdqcVo |
 | baobab-sunset | About hero | Rafael Peier | https://unsplash.com/photos/g9iF73UxIpU |
