@@ -129,3 +129,10 @@ Open points for the founder: the Financials wording, the "Abuja, Nigeria" captio
 * [x] "Investing in people" on Home is now a full height band over a photograph of a person at a laptop, seen from behind (founder's choice from three option sheets)
 * [x] Credits updated; `concrete-curve` is no longer used on any page
 * [x] Checked at 1280 px and 375 px: the person stays in frame on phones, text is legible, no overflow, no console errors
+
+## Long view section slides (9 October 2026)
+
+* [x] The closing band on Home fades between three photographs chosen by the founder: a family walking, three people arm in arm, walkers at sunset in Dakar
+* [x] Changes every 7 seconds, with a pause button; no movement for visitors who ask for reduced motion; first photograph shows without `site.js`
+* [x] Credits updated; `lagoon-sunset` is no longer used on any page
+* [x] Checked in the browser: slides advance, pause holds the slide, resume restarts, no overflow, no console errors

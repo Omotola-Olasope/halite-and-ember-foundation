@@ -114,6 +114,31 @@
     });
   }
 
+  // Photograph slides in a band ------------------------------------------------
+  // The photographs change only for visitors who have not asked for less motion.
+  const SLIDE_INTERVAL_MS = 7000;
+  const slideBand = document.querySelector(".media-band--slides");
+  const slidesButton = document.querySelector(".slides-toggle");
+  const slides = slideBand ? [...slideBand.querySelectorAll(":scope > img")] : [];
+  if (slides.length > 1 && slidesButton && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let current = 0;
+    let timer = null;
+    const advance = () => {
+      if (document.hidden) return;
+      slides[current].classList.remove("is-active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("is-active");
+    };
+    const setRunning = (running) => {
+      window.clearInterval(timer);
+      timer = running ? window.setInterval(advance, SLIDE_INTERVAL_MS) : null;
+      slidesButton.textContent = running ? "Pause slides" : "Play slides";
+    };
+    slidesButton.hidden = false;
+    slidesButton.addEventListener("click", () => setRunning(timer === null));
+    setRunning(true);
+  }
+
   // Reveal on scroll ----------------------------------------------------------
   const revealables = document.querySelectorAll("[data-reveal]");
   if ("IntersectionObserver" in window) {

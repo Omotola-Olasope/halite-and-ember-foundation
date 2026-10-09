@@ -12,7 +12,10 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | music-drum | Programmes, music tuition | Paul Zoetemeijer | https://unsplash.com/photos/ekBOf6sJYYo |
 | village-aerial | Programmes, displaced people and widows | Paul Edesemi | https://unsplash.com/photos/niElH29LKjw |
 | library-windows | Foundation Bursary | Drahomír Hugo Posteby-Mach | https://unsplash.com/photos/n4y3eiQSIoc |
-| lagoon-sunset | Home, closing band | Solomon Wada | https://unsplash.com/photos/IW_edtdqcVo |
+| family-walk | Home, closing band slides | Meghan Holmes | https://unsplash.com/photos/sNLwgAL1B7k |
+| arm-in-arm | Home, closing band slides | HisArt Photos | https://unsplash.com/photos/PmwZVZentBg |
+| dakar-sunset | Home, closing band slides | Eyelit Studio | https://unsplash.com/photos/MEgr5w7NtqQ |
+| lagoon-sunset | Not in use since 9 October 2026 | Solomon Wada | https://unsplash.com/photos/IW_edtdqcVo |
 | baobab-sunset | About hero | Rafael Peier | https://unsplash.com/photos/g9iF73UxIpU |
 | light-arches | About, faith and service | Lu | https://unsplash.com/photos/w3ADoTRA8k4 |
 | baobab-tree | About, our standard | E. Diop | https://unsplash.com/photos/4lvXE8w7dbQ |
