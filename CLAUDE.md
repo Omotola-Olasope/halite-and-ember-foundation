@@ -25,6 +25,7 @@ assets/js/site.js: progressive enhancement only (theme, menu, reveal, copy); eve
 assets/img/: Unsplash photography as WebP at fixed widths, credited in `assets/img/CREDITS.md` and on the public `/credits/` page (keep both in step); `partners/` holds the ALX Africa logo; `trustees/` holds trustee portraits
 assets/img/brand/: the Foundation's own logo as outlined SVG in the site palette (Ink, Copper, Cloud). The header symbol is inline SVG in every page; the footer uses `logo-stacked-reversed.svg`. `favicon.svg`, `favicon.ico` and `apple-touch-icon.png` sit at the root. All are generated from the logo package scripts, so regenerate rather than hand edit. The logo lettering is artwork (outlines), not a third site typeface
 assets/video/: the Home hero film, a 15 second silent loop in WebM and MP4. `site.js` loads it only on screens 48rem and wider, never for reduced motion or data saving, and shows a pause button; the still `abuja-sunset` is the fallback everywhere else. Film must show places, never people presented as beneficiaries, and be credited like the photographs
+Home has two photograph bands built on `.media-band`: the purpose section (`--full`, as tall as the hero) and the closing section (`--slides`), which crossfades three photographs every 5 seconds with a pause button and holds still for reduced motion. People in photographs must not be identifiable or presented as beneficiaries
 assets/fonts/: DM Serif Display and Kulim Park woff2 files, each with its OFL licence
 tasks/: plan (`todo.md`) and lessons files
 

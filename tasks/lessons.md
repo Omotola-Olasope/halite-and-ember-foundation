@@ -25,3 +25,5 @@
 * The no JavaScript navigation fallback is not an acceptable look on phones; the enhanced full screen menu is the intended experience, so site.js must ship.
 * Navigation labels are set in Kulim Park 600. At 400 the founder found them too thin over a hero photograph.
 * Stock footage tags lie about location. Two clips tagged Lagos were Recife and Abuja. Identify the landmarks before captioning a place.
+* When the founder asks for a different photograph, show a sheet of options mocked up with the real text over each and give one recommendation; do not pick alone.
+* Slides: 5 seconds per photograph with a 2.5 second crossfade. 3 seconds felt too fast and a 1 second fade too abrupt.
