@@ -92,3 +92,18 @@ Known follow ups, deliberately left:
 * No favicon, pending a mark from the design system.
 * `404.html` duplicates the shared CSS foundation because there is no build step to share it yet. Workstream 3 removes the duplication via templates.
 * At 320px, the narrowest viewport still in use, one word of the statement sits alone on a line. It is caused by binding "their opportunity" so it cannot split, which is what keeps the last line from stranding between 512px and 639px. The wider band matters more than a 320px screen, so the binding stays.
+
+## Logo on the site (9 October 2026)
+
+Founder decisions: the site keeps its own palette, so the logo is used in a site colour variant (Ink #111315, Copper #A66A45, Cloud #F3F5F4). Header shows the symbol beside the existing text name. Footer shows the stacked logo. Work stays on `staging`; nothing goes to `main` without explicit approval, and nothing implies registration while the Charity Commission decision is pending.
+
+* [x] Add `assets/img/brand/logo-stacked-reversed.svg` (outlines only, site colours)
+* [x] Replace `favicon.svg`; add `favicon.ico` and `apple-touch-icon.png` at the root
+* [x] All nine pages: icon links in the head, symbol in the header, stacked logo in the footer
+* [x] `site.css`: size the new header mark, style the footer logo
+* [x] Verify in the browser: light, dark, overlay header, 320 px and 375 px phones, no horizontal overflow
+* [x] Record the new assets in `CLAUDE.md`
+
+### Review
+
+Checked in the browser on the local server: header symbol and footer stacked logo render on Home, About and Privacy; light theme, dark theme and the overlay header over a hero photograph all read correctly; no horizontal overflow at 320 px or 375 px and the brand, theme toggle and menu button still share one row; no console errors. The root `favicon.ico` also clears the old 404 noted in the workstream 1 review. The live site is unchanged; this sits on the staging branch only.

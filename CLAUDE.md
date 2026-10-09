@@ -22,6 +22,7 @@ Header, mobile menu and footer are duplicated in every page (no build step); cha
 assets/css/site.css: the only stylesheet (tokens, fluid type, light and dark themes)
 assets/js/site.js: progressive enhancement only (theme, menu, reveal, copy); every page must work without it
 assets/img/: Unsplash photography as WebP at fixed widths, credited in `assets/img/CREDITS.md` and on the public `/credits/` page (keep both in step); `partners/` holds the ALX Africa logo; `trustees/` holds trustee portraits
+assets/img/brand/: the Foundation's own logo as outlined SVG in the site palette (Ink, Copper, Cloud). The header symbol is inline SVG in every page; the footer uses `logo-stacked-reversed.svg`. `favicon.svg`, `favicon.ico` and `apple-touch-icon.png` sit at the root. All are generated from the logo package scripts, so regenerate rather than hand edit. The logo lettering is artwork (outlines), not a third site typeface
 assets/fonts/: DM Serif Display and Kulim Park woff2 files, each with its OFL licence
 tasks/: plan (`todo.md`) and lessons files
 
