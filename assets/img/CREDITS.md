@@ -14,7 +14,7 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | library-windows | Foundation Bursary | Drahomír Hugo Posteby-Mach | https://unsplash.com/photos/n4y3eiQSIoc |
 | family-walk | Home, closing band slides | Meghan Holmes | https://unsplash.com/photos/sNLwgAL1B7k |
 | arm-in-arm | Home, closing band slides | HisArt Photos | https://unsplash.com/photos/PmwZVZentBg |
-| dakar-sunset | Home, closing band slides | Eyelit Studio | https://unsplash.com/photos/MEgr5w7NtqQ |
+| dakar-sunset | Home, closing band slides (right side shaded to black) | Eyelit Studio | https://unsplash.com/photos/MEgr5w7NtqQ |
 | lagoon-sunset | Not in use since 9 October 2026 | Solomon Wada | https://unsplash.com/photos/IW_edtdqcVo |
 | baobab-sunset | About hero | Rafael Peier | https://unsplash.com/photos/g9iF73UxIpU |
 | light-arches | About, faith and service | Lu | https://unsplash.com/photos/w3ADoTRA8k4 |

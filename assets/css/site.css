@@ -696,7 +696,7 @@ html:not(.enhanced) .header-inner { flex-wrap: wrap; height: auto; padding-block
 }
 /* A band that fades between several photographs. The first shows without
    site.js; the script advances them and offers a pause button. */
-.media-band--slides > img { opacity: 0; transition: opacity 1600ms var(--ease); }
+.media-band--slides > img { opacity: 0; transition: opacity 1000ms var(--ease); }
 .media-band--slides > img.is-active { opacity: 1; }
 /* A band as tall as the Home hero, with the hero's extra shade behind the text. */
 .media-band--full { min-height: 100vh; min-height: 100svh; }
