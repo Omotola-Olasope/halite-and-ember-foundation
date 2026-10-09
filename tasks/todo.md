@@ -107,3 +107,19 @@ Founder decisions: the site keeps its own palette, so the logo is used in a site
 ### Review
 
 Checked in the browser on the local server: header symbol and footer stacked logo render on Home, About and Privacy; light theme, dark theme and the overlay header over a hero photograph all read correctly; no horizontal overflow at 320 px or 375 px and the brand, theme toggle and menu button still share one row; no console errors. The root `favicon.ico` also clears the old 404 noted in the workstream 1 review. The live site is unchanged; this sits on the staging branch only.
+
+## Navigation wording, Financials page and Home film (9 October 2026)
+
+Founder decisions: question style labels (About us, What we do, Who we work with, Our leadership team, Contact us), Home dropped from the menu, a Financials page linked from the footer, and a silent looping film on the Home hero. Addresses are unchanged so nothing breaks on the live site.
+
+* [x] Relabel header, phone menu and footer on every page; page titles and eyebrows follow
+* [x] `/financials/` page, footer link and sitemap entry
+* [x] Home hero: Abuja sunset still for every device, film on larger screens with a pause button
+* [x] Credits page and `CREDITS.md` updated for the film
+* [x] Desktop menu now starts at 68rem so the longer labels stay on one line; labels set in 600 weight
+
+### Review
+
+Checked in the browser on the local server. The film loads, fades in over the still and the pause button stops and restarts it. At 375 px no film is requested and the still shows. The phone menu lists the five new labels. The header keeps one row at 1090 px and switches to the menu button at 1040 px, with no horizontal overflow at either. No console errors.
+
+Open points for the founder: the Financials wording, the "Abuja, Nigeria" caption (identified from the World Trade Center and Churchgate towers, not from the footage's own tags), and whether "Our leadership team" should carry the word trustees anywhere in the menu.

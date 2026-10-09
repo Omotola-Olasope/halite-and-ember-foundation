@@ -23,3 +23,5 @@
 * Headlines use DM Serif Display; Kulim Park Light read as too thin at display sizes.
 * Page heroes are full bleed: the photograph sits behind the headline on every main page, as on Home.
 * The no JavaScript navigation fallback is not an acceptable look on phones; the enhanced full screen menu is the intended experience, so site.js must ship.
+* Navigation labels are set in Kulim Park 600. At 400 the founder found them too thin over a hero photograph.
+* Stock footage tags lie about location. Two clips tagged Lagos were Recife and Abuja. Identify the landmarks before captioning a place.

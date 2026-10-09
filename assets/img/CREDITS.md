@@ -4,7 +4,7 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 
 | File | Used on | Photographer | Unsplash photo |
 | --- | --- | --- | --- |
-| bridge-night | Home hero | Opeyemi Adisa | https://unsplash.com/photos/Ww2j734hEcA |
+| bridge-night | Link preview image on every page | Opeyemi Adisa | https://unsplash.com/photos/Ww2j734hEcA |
 | concrete-curve | Home, purpose | Jonny James | https://unsplash.com/photos/ulFAi1jkNcA |
 | desk-light | Programmes, 2027 editions | ReyLabs Studio | https://unsplash.com/photos/ohxs8oPgQ9k |
 | analytics-screen | Data Analytics Scholarship | Luke Chesser | https://unsplash.com/photos/JKUTrJ4vK00 |
@@ -20,6 +20,8 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | lagos-aerial | Partners hero | Malik Buraimoh | https://unsplash.com/photos/EMjpo0YjHPw |
 | colonnade | Governance hero | Pix Tresa | https://unsplash.com/photos/LvvIma6We8U |
 | morning-lake | Contact hero | Nguyễn Đức | https://unsplash.com/photos/KdNHbryN5kM |
+
+The Home hero film (`assets/video/abuja-sunset-720`) and its still (`abuja-sunset`) come from one Pexels film by Bashir Hussaini Ahmed, used under the Pexels Licence (https://www.pexels.com/license/): https://www.pexels.com/video/dramatic-urban-sunset-over-modern-highway-35467101/. Seconds 0 to 16 are cut into a 15 second loop.
 
 Trustee portraits in `trustees/` were supplied by the trustees.
 

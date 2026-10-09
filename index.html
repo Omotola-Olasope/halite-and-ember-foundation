@@ -18,7 +18,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/dm-serif-display-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/kulim-park-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="/assets/img/bridge-night-1600.webp" imagesrcset="/assets/img/bridge-night-800.webp 800w, /assets/img/bridge-night-1600.webp 1600w, /assets/img/bridge-night-2400.webp 2400w" imagesizes="100vw">
+<link rel="preload" as="image" href="/assets/img/abuja-sunset-1600.webp" imagesrcset="/assets/img/abuja-sunset-800.webp 800w, /assets/img/abuja-sunset-1600.webp 1600w, /assets/img/abuja-sunset-2400.webp 2400w" imagesizes="100vw">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script>try{var t=localStorage.getItem("hef-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 <script src="/assets/js/site.js" defer></script>
@@ -34,12 +34,11 @@
     </a>
     <nav aria-label="Main">
       <ul class="nav-list">
-        <li><a class="nav-link" href="/" aria-current="page">Home</a></li>
-        <li><a class="nav-link" href="/about/">About</a></li>
-        <li><a class="nav-link" href="/programmes/">Programmes</a></li>
-        <li><a class="nav-link" href="/partners/">Partners</a></li>
-        <li><a class="nav-link" href="/governance/">Governance</a></li>
-        <li><a class="nav-link" href="/contact/">Contact</a></li>
+        <li><a class="nav-link" href="/about/">About us</a></li>
+        <li><a class="nav-link" href="/programmes/">What we do</a></li>
+        <li><a class="nav-link" href="/partners/">Who we work with</a></li>
+        <li><a class="nav-link" href="/governance/">Our leadership team</a></li>
+        <li><a class="nav-link" href="/contact/">Contact us</a></li>
       </ul>
     </nav>
     <button class="icon-button theme-toggle" type="button" aria-label="Switch theme">
@@ -55,12 +54,11 @@
 <div class="menu" id="menu">
   <nav aria-label="Main, small screens">
     <ol class="menu-list">
-      <li><a href="/" aria-current="page"><span>01</span>Home</a></li>
-      <li><a href="/about/"><span>02</span>About</a></li>
-      <li><a href="/programmes/"><span>03</span>Programmes</a></li>
-      <li><a href="/partners/"><span>04</span>Partners</a></li>
-      <li><a href="/governance/"><span>05</span>Governance</a></li>
-      <li><a href="/contact/"><span>06</span>Contact</a></li>
+      <li><a href="/about/"><span>01</span>About us</a></li>
+      <li><a href="/programmes/"><span>02</span>What we do</a></li>
+      <li><a href="/partners/"><span>03</span>Who we work with</a></li>
+      <li><a href="/governance/"><span>04</span>Our leadership team</a></li>
+      <li><a href="/contact/"><span>05</span>Contact us</a></li>
     </ol>
   </nav>
   <div class="menu-foot">
@@ -72,10 +70,14 @@
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-media">
-      <img src="/assets/img/bridge-night-1600.webp"
-           srcset="/assets/img/bridge-night-800.webp 800w, /assets/img/bridge-night-1600.webp 1600w, /assets/img/bridge-night-2400.webp 2400w"
-           sizes="100vw" width="2400" height="1600" fetchpriority="high"
-           alt="A cable stayed bridge lit against the night sky over the water in Lagos">
+      <img src="/assets/img/abuja-sunset-1600.webp"
+           srcset="/assets/img/abuja-sunset-800.webp 800w, /assets/img/abuja-sunset-1600.webp 1600w, /assets/img/abuja-sunset-2400.webp 2400w"
+           sizes="100vw" width="2400" height="1350" fetchpriority="high"
+           alt="The sun setting between tall buildings above a wide road in Abuja">
+      <video class="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" hidden>
+        <source data-src="/assets/video/abuja-sunset-720.webm" type="video/webm">
+        <source data-src="/assets/video/abuja-sunset-720.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="wrap">
       <div class="hero-content">
@@ -88,7 +90,10 @@
           <a class="button button--copper" href="/programmes/">Our programmes <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></a>
           <a class="button button--ghost" href="/about/">About the Foundation</a>
         </div>
-        <p class="caption">Lagos, Nigeria</p>
+        <div class="hero-note">
+          <button class="film-toggle" type="button" hidden>Pause film</button>
+          <p class="caption">Abuja, Nigeria</p>
+        </div>
       </div>
     </div>
   </section>
@@ -201,17 +206,18 @@
       <nav aria-label="Footer">
         <p class="footer-heading">The Foundation</p>
         <ul class="footer-links">
-          <li><a href="/about/">About</a></li>
-          <li><a href="/programmes/">Programmes</a></li>
-          <li><a href="/partners/">Partners</a></li>
-          <li><a href="/governance/">Governance</a></li>
+          <li><a href="/about/">About us</a></li>
+          <li><a href="/programmes/">What we do</a></li>
+          <li><a href="/partners/">Who we work with</a></li>
+          <li><a href="/governance/">Our leadership team</a></li>
+          <li><a href="/financials/">Financials</a></li>
         </ul>
       </nav>
       <div>
         <p class="footer-heading">Contact</p>
         <ul class="footer-links">
           <li><a href="mailto:hello@haliteandemberfoundation.org">hello@haliteandemberfoundation.org</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/contact/">Contact us</a></li>
           <li><a href="/privacy/">Privacy notice</a></li>
           <li><a href="/credits/">Image credits</a></li>
         </ul>

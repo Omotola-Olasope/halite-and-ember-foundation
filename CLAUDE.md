@@ -15,14 +15,16 @@ Lint: none yet
 Type check: none yet
 
 ## Architecture
-index.html: Home. Each other page is `<name>/index.html`: about, programmes, partners, governance, contact, privacy, credits
+index.html: Home. Each other page is `<name>/index.html`: about, programmes, partners, governance, contact, privacy, credits, financials
+Navigation labels are questions a visitor would ask, while the addresses keep their original names: About us (`/about/`), What we do (`/programmes/`), Who we work with (`/partners/`), Our leadership team (`/governance/`), Contact us (`/contact/`). Financials, Privacy notice and Image credits are footer only
 404.html: not found page
 Every main page opens with a full bleed hero (photograph behind the headline) and uses the overlay header
-Header, mobile menu and footer are duplicated in every page (no build step); change all eight together
+Header, mobile menu and footer are duplicated in every page (no build step); change all ten files together (nine pages and `404.html`)
 assets/css/site.css: the only stylesheet (tokens, fluid type, light and dark themes)
 assets/js/site.js: progressive enhancement only (theme, menu, reveal, copy); every page must work without it
 assets/img/: Unsplash photography as WebP at fixed widths, credited in `assets/img/CREDITS.md` and on the public `/credits/` page (keep both in step); `partners/` holds the ALX Africa logo; `trustees/` holds trustee portraits
 assets/img/brand/: the Foundation's own logo as outlined SVG in the site palette (Ink, Copper, Cloud). The header symbol is inline SVG in every page; the footer uses `logo-stacked-reversed.svg`. `favicon.svg`, `favicon.ico` and `apple-touch-icon.png` sit at the root. All are generated from the logo package scripts, so regenerate rather than hand edit. The logo lettering is artwork (outlines), not a third site typeface
+assets/video/: the Home hero film, a 15 second silent loop in WebM and MP4. `site.js` loads it only on screens 48rem and wider, never for reduced motion or data saving, and shows a pause button; the still `abuja-sunset` is the fallback everywhere else. Film must show places, never people presented as beneficiaries, and be credited like the photographs
 assets/fonts/: DM Serif Display and Kulim Park woff2 files, each with its OFL licence
 tasks/: plan (`todo.md`) and lessons files
 

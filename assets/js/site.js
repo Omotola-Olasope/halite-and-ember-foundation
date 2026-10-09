@@ -76,7 +76,7 @@
     });
 
     // Close if the viewport grows past the breakpoint where the menu hides.
-    window.matchMedia("(min-width: 60rem)").addEventListener("change", (event) => {
+    window.matchMedia("(min-width: 68rem)").addEventListener("change", (event) => {
       if (event.matches) setMenu(false);
     });
   }
@@ -87,6 +87,31 @@
     const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  // Home hero film ------------------------------------------------------------
+  // Larger screens only, and never when the visitor asks for less motion or
+  // less data. Without it the still photograph simply stays in place.
+  const film = document.querySelector(".hero-video");
+  const filmButton = document.querySelector(".film-toggle");
+  const wantsFilm = window.matchMedia("(min-width: 48rem)").matches
+    && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    && !navigator.connection?.saveData;
+  if (film && filmButton && wantsFilm) {
+    film.querySelectorAll("source").forEach((source) => { source.src = source.dataset.src; });
+    film.hidden = false;
+    film.addEventListener("playing", () => {
+      film.classList.add("is-playing");
+      filmButton.hidden = false;
+    }, { once: true });
+    film.load();
+    // A browser may refuse to autoplay; the still is the intended fallback.
+    film.play().catch(() => {});
+    filmButton.addEventListener("click", () => {
+      const resume = film.paused;
+      if (resume) film.play(); else film.pause();
+      filmButton.textContent = resume ? "Pause film" : "Play film";
+    });
   }
 
   // Reveal on scroll ----------------------------------------------------------
