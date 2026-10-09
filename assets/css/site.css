@@ -694,6 +694,16 @@ html:not(.enhanced) .header-inner { flex-wrap: wrap; height: auto; padding-block
   z-index: -1;
   background: linear-gradient(0deg, rgb(8 10 11 / 0.88) 0%, rgb(8 10 11 / 0.35) 60%, rgb(8 10 11 / 0.15) 100%);
 }
+/* A band as tall as the Home hero, with the hero's extra shade behind the text. */
+.media-band--full { min-height: 100vh; min-height: 100svh; }
+/* Narrow screens crop hard, so keep the person in frame, not just the laptop. */
+.media-band--full > img { object-position: 34% 50%; }
+@media (min-width: 48rem) { .media-band--full > img { object-position: 58% 50%; } }
+.media-band--full::after {
+  background:
+    linear-gradient(0deg, rgb(8 10 11 / 0.9) 0%, rgb(8 10 11 / 0.4) 55%, rgb(8 10 11 / 0.2) 100%),
+    linear-gradient(90deg, rgb(8 10 11 / 0.6) 0%, rgb(8 10 11 / 0) 65%);
+}
 .media-band .eyebrow { color: #d49a74; }
 .media-band h2 { max-width: 20ch; font-size: var(--step-4); }
 .media-band p { max-width: 34rem; margin-top: var(--space-m); color: rgb(255 255 255 / 0.86); font-size: var(--step-1); line-height: 1.5; }

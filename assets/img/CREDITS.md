@@ -5,7 +5,8 @@ Photographs are used under the Unsplash Licence (https://unsplash.com/license) a
 | File | Used on | Photographer | Unsplash photo |
 | --- | --- | --- | --- |
 | bridge-night | Link preview image on every page | Opeyemi Adisa | https://unsplash.com/photos/Ww2j734hEcA |
-| concrete-curve | Home, purpose | Jonny James | https://unsplash.com/photos/ulFAi1jkNcA |
+| laptop-work | Home, purpose | JEaLiFe Pictures | https://unsplash.com/photos/XE4fjzsMm6Q |
+| concrete-curve | Not in use since 9 October 2026 | Jonny James | https://unsplash.com/photos/ulFAi1jkNcA |
 | desk-light | Programmes, 2027 editions | ReyLabs Studio | https://unsplash.com/photos/ohxs8oPgQ9k |
 | analytics-screen | Data Analytics Scholarship | Luke Chesser | https://unsplash.com/photos/JKUTrJ4vK00 |
 | music-drum | Programmes, music tuition | Paul Zoetemeijer | https://unsplash.com/photos/ekBOf6sJYYo |

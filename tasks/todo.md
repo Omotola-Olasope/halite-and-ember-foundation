@@ -123,3 +123,9 @@ Founder decisions: question style labels (About us, What we do, Who we work with
 Checked in the browser on the local server. The film loads, fades in over the still and the pause button stops and restarts it. At 375 px no film is requested and the still shows. The phone menu lists the five new labels. The header keeps one row at 1090 px and switches to the menu button at 1040 px, with no horizontal overflow at either. No console errors.
 
 Open points for the founder: the Financials wording, the "Abuja, Nigeria" caption (identified from the World Trade Center and Churchgate towers, not from the footage's own tags), and whether "Our leadership team" should carry the word trustees anywhere in the menu.
+
+## Purpose section photograph (9 October 2026)
+
+* [x] "Investing in people" on Home is now a full height band over a photograph of a person at a laptop, seen from behind (founder's choice from three option sheets)
+* [x] Credits updated; `concrete-curve` is no longer used on any page
+* [x] Checked at 1280 px and 375 px: the person stays in frame on phones, text is legible, no overflow, no console errors
