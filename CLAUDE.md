@@ -16,7 +16,7 @@ Type check: none yet
 
 ## Architecture
 index.html: Home. Each other page is `<name>/index.html`: about, programmes, partners, governance, contact, privacy, credits, financials
-Navigation labels are questions a visitor would ask, while the addresses keep their original names: About us (`/about/`), What we do (`/programmes/`), Who we work with (`/partners/`), Our leadership team (`/governance/`), Contact us (`/contact/`). Financials, Privacy notice and Image credits are footer only
+Navigation labels are questions a visitor would ask, while the addresses keep their original names: About us (`/about/`), What we do (`/programmes/`), Who we work with (`/partners/`), Our trustees (`/governance/`), Contact us (`/contact/`). Financials, Privacy notice and Image credits are footer only
 404.html: not found page
 Every main page opens with a full bleed hero (photograph behind the headline) and uses the overlay header
 Header, mobile menu and footer are duplicated in every page (no build step); change all ten files together (nine pages and `404.html`)
