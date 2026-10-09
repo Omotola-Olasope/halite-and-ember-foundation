@@ -116,7 +116,7 @@
 
   // Photograph slides in a band ------------------------------------------------
   // The photographs change only for visitors who have not asked for less motion.
-  const SLIDE_INTERVAL_MS = 3000;
+  const SLIDE_INTERVAL_MS = 5000;
   const slideBand = document.querySelector(".media-band--slides");
   const slidesButton = document.querySelector(".slides-toggle");
   const slides = slideBand ? [...slideBand.querySelectorAll(":scope > img")] : [];
